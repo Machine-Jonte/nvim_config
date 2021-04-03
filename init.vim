@@ -7,27 +7,45 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-" ...
+" gc comment
 Plugin 'tomtom/tcomment_vim'
+" Fuzzy search
 Plugin 'kien/ctrlp.vim'
-" Plugin 'ayu-theme/ayu-vim'
-" Plugin 'vim-airline/vim-airline'
+
+"{{ Git integration
+" ---> git commands within vim <---
+Plugin 'tpope/vim-fugitive'
+" ---> git changes on the gutter <---
+Plugin 'airblade/vim-gitgutter'
+" ---> nerdtree git changes <---
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+"}}
+
+"{{ TMux - Vim integration
+Plugin 'christoomey/vim-tmux-navigator'
+"}}
+
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'Rigellute/shades-of-purple.vim'
+Plugin 'vim-airline/vim-airline'
 " Plugin 'neoclide/coc.nvim'
-" All ofyour Plugins must be added before the following line
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " --- End Vundle Plugin Install ---
 
+set nowrap
+
 " Don't use if using inside of vscode
-" syntax on
-" set termguicolors     " enable true colors support
+syntax on
+set termguicolors     " enable true colors support
+
 " let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
+let ayucolor="mirage" " for mirage version of theme
 " let ayucolor="dark"   " for dark version of theme
-" colorscheme ayu
-" set number
+colorscheme ayu
+" colorscheme shades_of_purple
+set number
 
 " filetype plugin indent on
 " show existing tab with 4 spaces width
